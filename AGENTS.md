@@ -29,3 +29,5 @@
 - The `--depth` flag significantly affects runtime; keep it at 1 for quick local testing
 - For local runs I typically use `--lang en` to keep results consistent regardless of system locale
 - Default concurrency (`--concurrency`) works fine at 4 on my machine; going above 8 starts hitting rate limits
+- I prefer outputting results as JSON (`--json`) rather than CSV — easier to pipe into `jq` for quick inspection
+- Use `--zoom 15` for city-level searches; default zoom can miss results in dense urban areas
