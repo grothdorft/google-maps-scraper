@@ -27,3 +27,5 @@
 ## Personal Notes
 - When adding new scraper fields, remember to update both the struct and the CSV/JSON output logic
 - The `--depth` flag significantly affects runtime; keep it at 1 for quick local testing
+- For local runs I typically use `--lang en` to keep results consistent regardless of system locale
+- Default concurrency (`--concurrency`) works fine at 4 on my machine; going above 8 starts hitting rate limits
