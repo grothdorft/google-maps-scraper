@@ -64,6 +64,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     # fonts-liberation provides common fonts to avoid rendering issues in headless chromium
     fonts-liberation \
+    # fonts-noto-color-emoji helps render emoji characters in scraped content correctly
+    fonts-noto-color-emoji \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
