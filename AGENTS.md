@@ -33,3 +33,5 @@
 - Use `--zoom 15` for city-level searches; default zoom can miss results in dense urban areas
 - Use `--zoom 12` for broader metro/regional searches where you want results across a wider area
 - When scraping for business emails, pipe JSON output through `jq '[.[] | select(.email != "")]'` to filter quickly
+- Use `--timeout 60` (seconds) when scraping slower connections or large result sets to avoid premature cancellation
+- Deduplication note: results can contain near-duplicates with slightly different names; post-process with `jq 'unique_by(.place_id)'` to be safe
